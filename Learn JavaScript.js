@@ -24,30 +24,26 @@ function sayHello(){
 
 sayHello();
 
-//funtie anonima
+//funtie 2 anonima
 var sayBye = function(){
 	console.log("Bye"); 
 }
 
-//functie 2
-function sing(){
-	console.log("AAAAAA");
-	console.log("bbbbbbb")
-}
-sing();
-
-//functie 3
+//functie 3 
 function sing(song){
 	console.log(song);
 
 }
 sing("aaaaa");
 sing("bbbbb");
-//functie 4
+
+//demo undefined
 function multiply(a,b){
+	console.log(a,b) // log la consola dar rezultatul este undefined
 	a*b
 }
-multiply(5,10);
+multiply(5,10);//undefined pt ca nu am return
+
 
 //functie return
 function multiply(a,b){
@@ -80,7 +76,7 @@ function checkDriverAge() {
 }
 checkDriverAge();
 
-//2. Function Expression.
+//2. Function Expression, functie anonima
 var checkDriverAge2 = function() {
 	var age = prompt("What is your age?");
 	if (Number(age) < 18) {
@@ -103,3 +99,31 @@ function checkDriverAge(age) {
 	}
 }
 console.log(checkDriverAge(92));
+
+//array care contine o functie
+var functionList=[function apple()
+	{ console.log("apple");
+}]
+
+
+//array 
+var array = ["Banana", "Apples", "Oranges", "Blueberries"];
+
+// 1. Remove Banana 
+array.shift();
+
+// 2. Sort 
+array.sort();
+
+// 3. Put "Kiwi" at the end of the array.
+array.push("Kiwi");
+
+// 4. Remove "Apples" 
+array.splice(0, 1);
+
+// 5. Sort  reverse order. 
+array.reverse();
+
+var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+// access "Oranges".
+array2[1][1][0];
