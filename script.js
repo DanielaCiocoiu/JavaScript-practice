@@ -1,24 +1,36 @@
-4*3;
-if (4*3==7) {
-	alert("You're smart!");
+//array de obiecte useri
+var database = [
+	{
+	username: "ana",
+	password: "secret"
+	}
+];
+//array de news
+var newsFeed = [
+	{
+	username: "Maia",
+	timeline: "watched the sky"
+	},
+
+	{
+	username: "Nicu",
+	timeline: "good morning sunshine1"
+	}
+];
+//action usser credential
+var userNamePrompt = prompt("What is your name?");
+var passwordPrompt = prompt("What is your password?");
+
+
+
+function signIn(user, pass) {
+	if (user === database[0].username &&
+		pass === database[0].password) {
+		console.log(newsFeed);
+	
+}else{
+	alert("Sorry, wrong username and password");
 }
-
-
-function sayHello(){
-	console.log("Hello");
 }
-
-sayHello();
-
-function sing(){
-	console.log("AAAAAA");
-	console.log("bbbbbbb")
-}
-sing();
-
-function sing(song){
-	console.log(song);
-
-}
-sing("aaaaa");
-sing("bbbbb");
+//apelez functia sinin care accepta doi parametri dandu-i cele doua arg
+signIn(userNamePrompt, passwordPrompt);

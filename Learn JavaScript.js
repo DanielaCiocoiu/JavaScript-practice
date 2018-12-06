@@ -3,6 +3,7 @@ var lastName = "Smith";
 if(firstName==="Bob"&&lastName==="Smith"){
 	alert("Hi Bob Smith");
 
+
 }
 
 var age=prompt("What is your age: ");
@@ -127,3 +128,37 @@ array.reverse();
 var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 // access "Oranges".
 array2[1][1][0];
+
+
+// 1. obiect cu doua proprietati
+{
+	username: "andrei",
+	password: "supersecret"
+}
+
+// 2. array care contine ob de mai sus
+var database = [
+	{
+		username: "andrei",
+		password: "supersecret"
+	}
+];
+
+// 3. array cu 3 obiecte
+var newsfeed = [
+	{
+		username: "Bobby",
+		timeline: "So tired from all that learning!"
+	},
+	{
+		username: "Sally",
+		timeline: "Javascript is sooooo cool!"
+	},
+	{
+		username: "Mitch",
+		timeline: "Javascript is preeetyy cool!"
+	}
+];
+
+
+
