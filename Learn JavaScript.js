@@ -160,5 +160,20 @@ var newsfeed = [
 	}
 ];
 
+//returnez ultimul element, unul cate unul
+var todos=[
+	"apple",
+	"banana",
+	"peach",
+	"orange",
+	"blueberry",
+];
 
+var todosLength = todos.length;
+for(var i=0; i<todosLength;i++){
+	todos.pop();
+}
 
+todos.forEach(function(i){
+	console.log(i);
+})
