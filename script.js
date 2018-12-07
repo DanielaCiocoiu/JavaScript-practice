@@ -52,5 +52,5 @@ function signIn(username, password) {
 var userNamePrompt = prompt("What is your name?");
 var passwordPrompt = prompt("What is your password?");
 
-//apelez functia sinin care accepta doi parametri dandu-i cele doua arg
+//apelez functia signin care accepta doi parametri dandu-i cele doua arg
 signIn(userNamePrompt, passwordPrompt);
