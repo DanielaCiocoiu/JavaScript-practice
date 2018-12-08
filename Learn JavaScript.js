@@ -130,13 +130,7 @@ var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 array2[1][1][0];
 
 
-// 1. obiect cu doua proprietati
-{
-	username: "andrei",
-	password: "supersecret"
-}
-
-// 2. array care contine ob de mai sus
+// 1. array care contine ob cu doua proprietati
 var database = [
 	{
 		username: "andrei",
@@ -144,7 +138,7 @@ var database = [
 	}
 ];
 
-// 3. array cu 3 obiecte
+// 2. array cu 3 obiecte
 var newsfeed = [
 	{
 		username: "Bobby",
@@ -179,39 +173,50 @@ todos.forEach(function(i){
 })
 
 
-//selection sort
-function Selection_Sort(arr, compare_Function) {
-
-	function compare(a, b) {
-	 return a - b;
-	 } 
-	var min = 0;
-	var index = 0;
-	var temp = 0;
-  
-   //{Function} compare_Function Compare function
-	compare_Function = compare_Function || compare;
-  
-	for (var i = 0; i < arr.length; i += 1) {
-	  index = i;
-	  min = arr[i];
-  
-	  for (var j = i + 1; j < arr.length; j += 1) {
-		if (compare_Function(min, arr[j]) > 0) {
-		  min = arr[j];
-		  index = j;
-		}
+function selectionSort(arr){
+	var minIdx, temp, 
+		len = arr.length;
+	for(var i = 0; i < len; i++){
+	  minIdx = i;
+	  for(var  j = i+1; j<len; j++){
+		 if(arr[j]<arr[minIdx]){
+			minIdx = j;
+		 }
 	  }
-  
 	  temp = arr[i];
-	  arr[i] = min;
-	  arr[index] = temp;
+	  arr[i] = arr[minIdx];
+	  arr[minIdx] = temp;
 	}
-  
-	//return sorted arr
 	return arr;
   }
+	 
+
+//fizzbuzz
+  for (var i=1; i <= 20; i++)
+{
+    if (i % 15 == 0)
+        console.log("FizzBuzz");
+    else if (i % 3 == 0)
+        console.log("Fizz");
+    else if (i % 5 == 0)
+        console.log("Buzz");
+    else
+        console.log(i);
+}
+
+//prime
+function isPrime(n){
+	var divisor = 2;
   
-  console.log(Selection_Sort([3, 0, 2, 5, -1, 4, 1], function(a, b) { return a - b; })); 
-  console.log(Selection_Sort([3, 0, 2, 5, -1, 4, 1], function(a, b) { return b - a; }));
+	while (n > divisor){
+	  if(n % divisor == 0){
+	   return false; 
+	  }
+	  else
+		divisor++;
+	}
+	return true;
+  }
   
+  isPrime(137);
+  isPrime(237);
